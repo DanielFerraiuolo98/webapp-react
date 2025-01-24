@@ -3,3 +3,16 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+header {
+  height: 100px;
+  position: fixed;
+  width: 100%;
+}
+
+footer {
+  height: 100px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
