@@ -7,11 +7,21 @@
 header {
   height: 100px;
   position: fixed;
+  top: 0;
   width: 100%;
 }
 
 .card {
+  width: 300px;
+  margin: 60px 30px;
+}
+
+.page {
   margin-top: 60px;
+}
+
+img {
+  width: 300px;
 }
 
 footer {
