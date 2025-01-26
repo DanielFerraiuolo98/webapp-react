@@ -1,14 +1,16 @@
 import { useParams } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import axios from "axios";
-import { MoviesContext } from "../context/moviesContext";  // Assicurati che il percorso sia corretto
+import { MoviesContext } from "../context/moviesContext";
 import Card from "./CardPage";
+import FormComponent from "../components/FormComponent";
+import ReviewComponent from "../components/ReviewComponent";
 
-const apiUrl = "http://localhost:3000/movies"; // URL API del server
+const apiUrl = "http://localhost:3000/movies";
 
 export default function DetailsPage() {
     const { id } = useParams();
-    const { item, setItem } = useContext(MoviesContext);  // Uso del contesto
+    const { item, setItem } = useContext(MoviesContext);
     const [singleMovie, setSingleMovie] = useState(null);
 
     useEffect(() => {
@@ -20,7 +22,6 @@ export default function DetailsPage() {
     function getData() {
         axios.get(apiUrl + "/" + id)
             .then((res) => {
-                console.log(res.data.item);
                 setSingleMovie(res.data.item);
                 setItem((prevMovie) => [...prevMovie, res.data.item]);
             })
@@ -32,8 +33,17 @@ export default function DetailsPage() {
             {singleMovie ? (
                 <Card data={singleMovie} />
             ) : (
-                <p>Caricamento...</p>  // Mostra un messaggio di caricamento
+                <p>Caricamento...</p>
             )}
+
+            <div>
+                <ReviewComponent />
+            </div>
+
+            <div className="movie-form">
+                <h2>Aggiungi una recensione</h2>
+                <FormComponent />
+            </div>
         </>
     );
 }
