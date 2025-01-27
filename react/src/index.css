@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 header {
   height: 100px;
   position: fixed;
@@ -11,9 +15,27 @@ header {
   width: 100%;
 }
 
-.card {
+.card-movies {
   width: 300px;
   margin: 60px 30px;
+}
+
+.card {
+  width: 1000px;
+  margin: 20px auto;
+}
+
+.contenitore {
+  display: flex;
+}
+
+.immagine {
+  width: 150px;
+  margin: 10px 0 0 500px;
+}
+
+.dettagli {
+  margin: 10px 0 0 10px;
 }
 
 .page {

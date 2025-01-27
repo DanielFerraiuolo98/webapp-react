@@ -41,7 +41,7 @@ export default function ReviewComponent() {
             <div className="card" key={item.id}>
                 <div className="card-body">
                     <h5 className="card-title">{item.name}</h5>
-                    <p>Average: {renderStars(item.media_voti)}</p>
+                    <p className="average">Average: {renderStars(item.media_voti)}</p>
                     <div>
                         {item.reviews && item.reviews.length > 0 ? (
                             item.reviews.map((review, idx) => (

@@ -19,7 +19,7 @@ export default function CardComponent() {
             {data.map((element) => {
                 const imgPath = "http://localhost:3000/img/movies/" + element.image;
                 return (
-                    <div className="card" key={element.id}>
+                    <div className="card-movies" key={element.id}>
                         <img src={imgPath} className="card-img-top" alt={element.title} />
                         <div className="card-body">
                             <h3 className="card-title">{element.title}</h3>
