@@ -37,6 +37,7 @@ export default function FormComponent() {
                         placeholder="Enter your name"
                         value={movie.name}
                         onChange={handleChange}
+                        required
                     />
                 </div>
 
@@ -50,6 +51,7 @@ export default function FormComponent() {
                         placeholder="Enter your review"
                         value={movie.review}
                         onChange={handleChange}
+                        required
                     ></textarea>
                 </div>
 
@@ -63,6 +65,7 @@ export default function FormComponent() {
                         placeholder="Enter your vote"
                         value={movie.vote}
                         onChange={handleChange}
+                        required
                     />
                 </div>
 

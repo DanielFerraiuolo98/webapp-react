@@ -1,4 +1,5 @@
-import DefaultLayout from "../layout/DefaultLayout"
+import DefaultLayout from "../layout/DefaultLayout";
+
 export default function ContactPage() {
     return (
         <>
